@@ -1,6 +1,6 @@
 ﻿namespace Calculadora
 {
-    partial class Form1
+    partial class Calculadora
     {
         /// <summary>
         ///  Required designer variable.
@@ -270,7 +270,7 @@
             txtCima.TabIndex = 1;
             txtCima.TextAlign = HorizontalAlignment.Right;
             // 
-            // Form1
+            // Calculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -297,11 +297,12 @@
             Controls.Add(btnPonto);
             Controls.Add(btnIgual);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "Form1";
+            Name = "Calculadora";
             Opacity = 0.95D;
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

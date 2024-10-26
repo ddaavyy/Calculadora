@@ -2,13 +2,13 @@ using System.Data;
 
 namespace Calculadora
 {
-    public partial class Form1 : Form
+    public partial class Calculadora : Form
     {
         // Variaveis para conferir algo
         bool conferer = false; // Para controle do '='
         bool conferer_apagar = false; // Para controle de apagar (quando aperta o '=')
 
-        public Form1()
+        public Calculadora()
         {
             InitializeComponent();
         }
@@ -196,12 +196,17 @@ namespace Calculadora
             {
                 if (!txtBaixo.Text.Contains("."))
                     txtBaixo.Text += ".";
-                    conferer_apagar = true;
+                conferer_apagar = true;
             }
             else
                 if (!txtBaixo.Text.Contains(".") && !string.IsNullOrWhiteSpace(txtBaixo.Text))
                 txtBaixo.Text += ".";
-                conferer_apagar = true;
+            conferer_apagar = true;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
